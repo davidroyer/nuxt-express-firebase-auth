@@ -6,6 +6,7 @@
       <h4 v-text="user.email"></h4>
       <button @click="logout">Sign Out</button>
     </div>
+    <div v-else-if="loading">Loading...</div>
     <div v-else>
       <button class="button-outline" @click="login">Sign In</button>
     </div>
@@ -23,13 +24,16 @@ export default {
   computed: {
     user () {
       return this.$store.getters.activeUser
+    },
+    loading () {
+      return this.$store.getters.isLoading
     }
   },
   methods: {
     login () {
+      this.$store.commit('SET_LOADING', true)
       firebase.auth().signInWithRedirect(new firebase.auth.GoogleAuthProvider())
     },
-
     async logout ({ commit }) {
       await firebase.auth().signOut()
       this.$store.commit('SET_USER', null)
