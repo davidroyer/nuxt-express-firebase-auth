@@ -35,6 +35,6 @@
     "eslint-plugin-standard": "^3.0.1"
   },
   "engines": {
-    "node": "8.7.0"
+    "node": "6.11.4"
   }
 }
