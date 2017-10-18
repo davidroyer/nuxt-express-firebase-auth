@@ -2,12 +2,11 @@ import express from 'express'
 import { Nuxt, Builder } from 'nuxt'
 const admin = require('firebase-admin');
 const key = require("../serviceAccountKey.json");
-// const cors = require('cors')({origin: true});
+
 admin.initializeApp({
     credential: admin.credential.cert(key),
     databaseURL: `https://${key.project_id}.firebaseio.com`
 });
-// var db = admin.database();
 
 import api from './api'
 
@@ -39,13 +38,3 @@ app.use(nuxt.render)
 // Listen the server
 app.listen(port, host)
 console.log('Server listening on ' + host + ':' + port) // eslint-disable-line no-console
-
-// ** WORKS **
-// var usersRef = db.ref("users");
-// usersRef.set({
-//   time: '1'
-// });
-//
-// usersRef.once("value", function(snapshot) {
-//   console.log(snapshot.val());
-// });
