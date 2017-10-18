@@ -3,7 +3,7 @@ const cookieParser = require('cookie-parser')();
 
 
 module.exports = function (req, res, next) {
-  console.log('SERVER MIDDLEWARE FIRING');
+  // console.log('SERVER MIDDLEWARE FIRING');
   getIdTokenFromRequest(req, res).then(idToken => {
     if (idToken) {
       addDecodedIdTokenToRequest(idToken, req).then(() => {
