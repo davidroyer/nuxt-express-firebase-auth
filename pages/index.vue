@@ -9,22 +9,15 @@
     <div v-else>
       <button class="button-outline" @click="login">Sign In</button>
     </div>
-
   </section>
 </template>
 
 <script>
-import axios from '~/plugins/axios'
-
 import firebase from 'firebase'
 export default {
-  async asyncData () {
-    let { data } = await axios.get('/api/users')
-    return { users: data }
-  },
   head () {
     return {
-      title: 'Users'
+      title: 'Home'
     }
   },
   computed: {
@@ -47,18 +40,4 @@ export default {
 </script>
 
 <style scoped>
-.title
-{
-  margin: 30px 0;
-}
-.users
-{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.user
-{
-  margin: 10px 0;
-}
 </style>
