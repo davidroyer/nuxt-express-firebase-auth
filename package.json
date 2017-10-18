@@ -1,9 +1,9 @@
 {
   "name": "nuxt-express-firebase-auth",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
+  "description": "Nuxt.js using Express and using Firebase Authentication",
   "author": "David Royer <droyer01@gmail.com>",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "backpack dev",
     "build": "nuxt build && backpack build",
