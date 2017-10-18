@@ -1,11 +1,11 @@
 <template>
   <section class="container">
     <img src="~assets/img/logo.png" alt="Nuxt.js Logo" class="logo" />
-    <h1 class="title">
+    <h2 class="title">
       You need to login
-    </h1>
+    </h2>
     <div>
-      <button @click="login">Sign In</button>
+      <button class="button-outline" @click="login">Sign In</button>
     </div>
 
   </section>

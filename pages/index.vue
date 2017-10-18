@@ -1,10 +1,5 @@
 <template>
   <section class="container">
-    <img src="~assets/img/logo.png" alt="Nuxt.js Logo" class="logo" />
-    <h1 class="title">
-      User Demo
-    </h1>
-
     <div class="" v-if="user">
       <h3 v-text="user.name"></h3>
       <img :src="user.picture" width="80px" alt="User Picture">
@@ -12,7 +7,7 @@
       <button @click="logout">Sign Out</button>
     </div>
     <div v-else>
-      <button @click="login">Sign In</button>
+      <button class="button-outline" @click="login">Sign In</button>
     </div>
 
   </section>
@@ -41,9 +36,7 @@ export default {
     login () {
       firebase.auth().signInWithRedirect(new firebase.auth.GoogleAuthProvider())
     },
-    // logout () {
-    //
-    // },
+
     async logout ({ commit }) {
       await firebase.auth().signOut()
       this.$store.commit('SET_USER', null)

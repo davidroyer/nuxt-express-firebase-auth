@@ -1,5 +1,6 @@
 <template>
   <div id="appWrapper">
+    <h1 class="siteTitle">Nuxt.js SSR with Firebase Authentication</h1>
     <nav class="mainNav">
       <nuxt-link to="/">Home</nuxt-link>
       <nuxt-link to="/secret">Secret Page</nuxt-link>
@@ -26,7 +27,7 @@ export default {
 <style>
 
 #appWrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-flow: column;
 }
@@ -34,18 +35,18 @@ export default {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  height: 90px;
-
 }
 
 #nuxtRouter {
-  width: 100%;
+  /*width: 100%;*/
   flex: 100%;
   flex-grow: 1;
-  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   padding: 1em 2em;
+  width: 900px;
+  max-width: 100%;
+  margin-top: 1em;
 }
 
 
@@ -57,7 +58,7 @@ export default {
 {
   margin: 0;
   width: 100%;
-  padding: 100px 0;
+  /*padding: 100px 0;*/
   text-align: center;
 }
 
@@ -87,4 +88,10 @@ export default {
   margin: 0;
 }
 
+.siteTitle {
+  font-size: 2.25em;
+  text-align: center;
+  padding-top: .5em;
+  font-weight: 500;
+}
 </style>

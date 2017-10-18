@@ -1,7 +1,6 @@
 const admin = require('firebase-admin');
 const cookieParser = require('cookie-parser')();
 
-
 module.exports = function (req, res, next) {
   // console.log('SERVER MIDDLEWARE FIRING');
   getIdTokenFromRequest(req, res).then(idToken => {

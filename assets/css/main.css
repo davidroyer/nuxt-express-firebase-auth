@@ -1,4 +1,4 @@
-html, body
+/*html, body
 {
   background-color: #fff;
   color: #000;
@@ -6,7 +6,7 @@ html, body
   font-family: "Source Sans Pro", Arial, sans-serif;
   height: 100vh;
   margin: 0;
-}
+}*/
 
 footer
 {
@@ -20,6 +20,10 @@ a, a:hover, a:focus, a:visited
   color: #000;
 }
 
+a.nuxt-link-exact-active.nuxt-link-active {
+    font-weight: 500;
+    border-bottom: 2px solid #9b4dc9;
+}
 .logo {
   width: 100%;
   height: auto;
@@ -40,5 +44,15 @@ a, a:hover, a:focus, a:visited
 }
 
 html, body {
-  font-size: 102% !important;
+  /*font-size: 102% !important;*/
+}
+
+button {
+  transition: .2s ease;
+  border: 2px solid #9b4dca;
+}
+
+button.button-outline:hover {
+    background-color: #9b4dca;
+    color: white;
 }
